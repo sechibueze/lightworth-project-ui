@@ -26,20 +26,62 @@ a {
   width: 90%;
 }
 
+.section {
+  padding: 4rem 0rem;
+  border-bottom: 1px solid #F1F1F1;
+}
+@media screen and (max-width: 680px) {
+  .section {
+    padding: 2rem 0rem;
+  }
+}
 .section-title {
+  display: block;
+  width: 50%;
   text-align: center;
-  margin: 1.8rem 0;
+  margin: 1.8rem auto;
   font-size: 1.8rem;
   position: relative;
 }
-.section-title::after {
+
+.point {
+  position: relative;
+}
+.point-tl::after {
   content: no-close-quote;
   position: absolute;
-  top: -3px;
-  right: 60%;
   border: 3px #5678ee solid;
   border-width: thick;
   z-index: 1;
+  top: -8px;
+  left: 40%;
+}
+.point-tr::after {
+  content: no-close-quote;
+  position: absolute;
+  border: 3px #5678ee solid;
+  border-width: thick;
+  z-index: 1;
+  top: -6px;
+  right: 40%;
+}
+.point-bl::after {
+  content: no-close-quote;
+  position: absolute;
+  border: 3px #5678ee solid;
+  border-width: thick;
+  z-index: 1;
+  bottom: 3px;
+  left: 38%;
+}
+.point-br::after {
+  content: no-close-quote;
+  position: absolute;
+  border: 3px #5678ee solid;
+  border-width: thick;
+  z-index: 1;
+  bottom: 2px;
+  right: 38%;
 }
 
 .btn {
@@ -55,6 +97,72 @@ a {
 }
 .btn:hover {
   opacity: 0.8;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.7rem;
+  justify-content: center;
+  align-content: center;
+}
+@media screen and (max-width: 680px) {
+  .card-wrapper {
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+}
+
+.card {
+  background-color: transparent;
+  border-radius: 0.7rem;
+  border: 1px solid #f9f9f9;
+  box-shadow: 0 0 2px #f9f9f9;
+  text-align: center;
+}
+.card-icon {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 3.8rem;
+}
+.card-image {
+  width: 100%;
+  display: block;
+  margin: auto;
+  height: 9rem;
+  max-height: 9rem;
+}
+.card-title {
+  width: 100%;
+  display: block;
+  font-size: 1.4rem;
+  margin: 0.5rem auto;
+  font-weight: bolder;
+}
+.card-caption {
+  padding: 0.5rem;
+  width: 100%;
+  display: block;
+}
+.card-footer {
+  border-top: 1px solid #f9f9f9;
+  border-bottom: 1px solid #f9f9f9;
+  display: block;
+  width: 100%;
+  padding: 0.3rem;
+}
+.card-cta {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0rem;
+  background-color: #f9f9f9;
+}
+@media screen and (max-width: 680px) {
+  .card {
+    margin-bottom: 1.2rem;
+  }
 }
 
 label {
@@ -253,6 +361,15 @@ label {
 
 .contact-info {
   display: inline;
+}
+
+.card-title, .card-icon {
+  color: #5678ee;
+  fill: #5678ee;
+}
+.card-cta a {
+  font-weight: bolder;
+  color: #5678ee;
 }
 
 /*# sourceMappingURL=main.css.map */

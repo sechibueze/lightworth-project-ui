@@ -4,6 +4,8 @@ $primary-color: #5678ee;
 $light-color: #f9f9f9;
 $dark-color: #555;
 $bg-dark: #333;
+$tablet-size: 800px;
+$mobile-size: 680px;
 
 
 
@@ -35,23 +37,64 @@ a{
   }
 }
 .section{
+  padding: 4rem 0rem;
+  border-bottom: 1px solid #F1F1F1;
+  @media screen and (max-width: $mobile-size) {
+    
+    padding: 2rem 0rem;
+
+  }
+
   &-title{
+    display: block;
+    width: 50%;
     text-align: center;
-    margin: 1.8rem 0;
+    margin: 1.8rem auto;
     font-size: 1.8rem;
     position: relative;
-    &::after{
-      content: no-close-quote;
-      position: absolute;
-      top: -3px;
-      right: 60%;
-      border: 3px $primary-color solid;
-      border-width: thick;
-      z-index: 1;
-    }
+    
   }
 }
 
+.point{
+  position: relative;
+  &-tl::after{
+    content: no-close-quote;
+    position: absolute;
+    border: 3px $primary-color solid;
+    border-width: thick;
+    z-index: 1;
+    top: -8px;
+    left: 40%;
+  }
+  &-tr::after{
+    content: no-close-quote;
+    position: absolute;
+    border: 3px $primary-color solid;
+    border-width: thick;
+    z-index: 1;
+    top: -6px;
+    right: 40%;
+  }
+  &-bl::after{
+    content: no-close-quote;
+    position: absolute;
+    border: 3px $primary-color solid;
+    border-width: thick;
+    z-index: 1;
+    bottom: 3px;
+    left: 38%;
+  }
+  &-br::after{
+    content: no-close-quote;
+    position: absolute;
+    border: 3px $primary-color solid;
+    border-width: thick;
+    z-index: 1;
+    bottom: 2px;
+    right: 38%;
+  }
+}
 
 // Buttons
 
@@ -71,6 +114,73 @@ a{
 }
 
 // Card
+.card-wrapper{
+  display: flex;
+  flex-direction: row;
+  column-gap: .7rem;
+  justify-content: center;
+  align-content: center;
+  @media screen and (max-width: $mobile-size) {
+    display: block;
+    margin: auto;
+    width: 100%;
+
+  }
+
+}
+.card{
+  background-color: transparent;
+  border-radius: .7rem;
+  border: 1px solid $light-color;
+  box-shadow: 0 0 2px $light-color;
+  text-align: center;
+  &-icon{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 3.8rem;
+    
+  }
+  &-image{
+    width: 100%;
+    display: block;
+    margin: auto;
+    height: 9rem;
+    max-height: 9rem;
+  }
+  &-title{
+    width: 100%;
+    display: block;
+    font-size: 1.4rem;
+    margin: .5rem auto;
+    font-weight: bolder;
+  }
+  &-caption{
+    padding: .5rem;
+    width: 100%;
+    display: block;
+    // text-align: left;
+  }
+  &-footer{
+    border-top: 1px solid $light-color;
+    border-bottom: 1px solid $light-color;
+    display: block;
+    width: 100%;
+    padding: .3rem;
+  }
+
+  &-cta{
+    display: block;
+    width: 100%;
+    padding: .5rem 0rem;
+    background-color: $light-color;
+  }
+  @media screen and (max-width: $mobile-size) {
+    margin-bottom: 1.2rem;
+    
+  }
+
+}
 
 // Forms
 label{
