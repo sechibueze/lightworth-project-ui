@@ -1,6 +1,6 @@
 @import 'config';
 
-$tablet-size: 800px;
+
 
 /********************** Navigation Bar *************************/
 .navbar{
@@ -166,4 +166,16 @@ $tablet-size: 800px;
 }
 .contact-info{
   display: inline;
+}
+
+// Our Works
+.card{
+  &-title, &-icon{
+    color: $primary-color;
+    fill: $primary-color;
+  }
+  &-cta a{
+    font-weight: bolder;
+    color: $primary-color;
+  }
 }
