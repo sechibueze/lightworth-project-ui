@@ -47,6 +47,8 @@ $tablet-size: 800px;
 .logo{
   display: inline;
   padding-right: 1.2rem;
+  cursor: pointer;
+  user-select: none;
   &-icon{
     position: relative;
     bottom: -11px;
@@ -110,4 +112,58 @@ $tablet-size: 800px;
       }
     }
   }
+}
+
+// Contact
+
+.contact{
+  &-form, &-data{
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  
+  &-data{
+    width: 39%;
+    li{
+      line-height: 2.3;
+    }
+    li:first-of-type{
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid $light-color;
+    }
+  }
+  &-form{
+    width: 60%;
+  }
+
+  @media screen and (max-width: $tablet-size){
+    &-form, &-data{
+      display: block;
+      width: 100%;
+      margin: auto;
+      li, li:first-of-type{
+        display: block;
+        width: 100%;
+        margin: auto;
+        padding: 0;
+        padding-bottom: 0rem;
+        border-bottom: none
+      }
+      li:last-of-type{
+        padding-bottom: 1.5rem;
+        border-bottom: 1px$light-color solid;
+      }
+    }
+  }
+}
+
+.contact-icon{
+  position: relative;
+  bottom: -8px;
+  color: $primary-color;
+  margin-right: 1rem;
+}
+.contact-info{
+  display: inline;
 }

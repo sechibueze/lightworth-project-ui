@@ -10,6 +10,7 @@ $bg-dark: #333;
 *{
   margin: 0;
   padding: 0;
+  resize: none;
   list-style: none;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
@@ -28,6 +29,7 @@ a{
 .container{
   width: 80%;
   display: block;
+  margin: auto;
   &-fluid{
     width: 90%;
   }
@@ -35,15 +37,85 @@ a{
 .section{
   &-title{
     text-align: center;
+    margin: 1.8rem 0;
+    font-size: 1.8rem;
+    position: relative;
+    &::after{
+      content: no-close-quote;
+      position: absolute;
+      top: -3px;
+      right: 60%;
+      border: 3px $primary-color solid;
+      border-width: thick;
+      z-index: 1;
+    }
   }
 }
 
 
 // Buttons
 
+.btn{
+  padding: .8rem 1.2rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: all 0.4s;
+  &-primary{
+    background-color: $primary-color;
+    color: $light-color;
+  }
+  &:hover{
+    opacity: .8;
+  }
+}
+
 // Card
 
 // Forms
+label{
+  display: block;
+  font-size: .7rem;
+  padding-bottom: .2rem;
+  text-align: left;
+}
+.tip{
+  font-size: .7rem;
+  font-style: oblique;
+}
+.form-group{
+  display: block;
+  width: 100%;
+  margin-bottom: 1.2rem;
+  &-inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1rem;
+    margin-bottom: 1.2rem;
+
+    .form-item{
+      width: 48%;
+      flex-flow: row;
+    }
+    .form-item:first-of-type{
+      margin-right: 1.3rem;
+    }
+  }
+
+}
+
+.form-control{
+  display: block;
+  width: 100%;
+  padding: .4rem ;
+  font-size: 1.1rem;
+  outline: none;
+  border: none;
+  background-color: #F1F1F1;
+  color: $dark-color;
+}
 
 // Modals
 
