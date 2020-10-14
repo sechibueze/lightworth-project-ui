@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  resize: none;
   list-style: none;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
@@ -19,6 +20,7 @@ a {
 .container {
   width: 80%;
   display: block;
+  margin: auto;
 }
 .container-fluid {
   width: 90%;
@@ -26,6 +28,77 @@ a {
 
 .section-title {
   text-align: center;
+  margin: 1.8rem 0;
+  font-size: 1.8rem;
+  position: relative;
+}
+.section-title::after {
+  content: no-close-quote;
+  position: absolute;
+  top: -3px;
+  right: 60%;
+  border: 3px #5678ee solid;
+  border-width: thick;
+  z-index: 1;
+}
+
+.btn {
+  padding: 0.8rem 1.2rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: all 0.4s;
+}
+.btn-primary {
+  background-color: #5678ee;
+  color: #f9f9f9;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+label {
+  display: block;
+  font-size: 0.7rem;
+  padding-bottom: 0.2rem;
+  text-align: left;
+}
+
+.tip {
+  font-size: 0.7rem;
+  font-style: oblique;
+}
+
+.form-group {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.2rem;
+}
+.form-group-inline {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+.form-group-inline .form-item {
+  width: 48%;
+  flex-flow: row;
+}
+.form-group-inline .form-item:first-of-type {
+  margin-right: 1.3rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.1rem;
+  outline: none;
+  border: none;
+  background-color: #F1F1F1;
+  color: #555;
 }
 
 /********************** Navigation Bar *************************/
@@ -71,6 +144,8 @@ a {
 .logo {
   display: inline;
   padding-right: 1.2rem;
+  cursor: pointer;
+  user-select: none;
 }
 .logo-icon {
   position: relative;
@@ -130,6 +205,54 @@ a {
   .navlinks .nav-item:hover, .navlinks .navbar-cta:hover {
     border: none;
   }
+}
+
+.contact-form, .contact-data {
+  display: inline-block;
+  vertical-align: top;
+}
+.contact-data {
+  width: 39%;
+}
+.contact-data li {
+  line-height: 2.3;
+}
+.contact-data li:first-of-type {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f9f9f9;
+}
+.contact-form {
+  width: 60%;
+}
+@media screen and (max-width: 800px) {
+  .contact-form, .contact-data {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+  .contact-form li, .contact-form li:first-of-type, .contact-data li, .contact-data li:first-of-type {
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    padding-bottom: 0rem;
+    border-bottom: none;
+  }
+  .contact-form li:last-of-type, .contact-data li:last-of-type {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px #f9f9f9 solid;
+  }
+}
+
+.contact-icon {
+  position: relative;
+  bottom: -8px;
+  color: #5678ee;
+  margin-right: 1rem;
+}
+
+.contact-info {
+  display: inline;
 }
 
 /*# sourceMappingURL=main.css.map */
