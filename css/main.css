@@ -17,11 +17,12 @@ a {
   text-decoration: none;
 }
 
-.container {
+.container, .container-fluid {
   width: 80%;
   display: block;
   margin: auto;
 }
+
 .container-fluid {
   width: 90%;
 }
@@ -94,6 +95,10 @@ a {
 .btn-primary {
   background-color: #5678ee;
   color: #f9f9f9;
+}
+.btn-reverse {
+  background-color: #f9f9f9;
+  color: #5678ee;
 }
 .btn:hover {
   opacity: 0.8;
@@ -313,6 +318,191 @@ label {
   .navlinks .nav-item:hover, .navlinks .navbar-cta:hover {
     border: none;
   }
+}
+
+/************ Page Header and Banner *********************/
+.page-header {
+  background-color: #5678ee;
+  padding: 3rem 0rem;
+  width: 100%;
+  display: block;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  column-gap: 0.8rem;
+}
+@media screen and (max-width: 680px) {
+  .banner {
+    display: block;
+  }
+}
+
+.banner-caption {
+  width: 50%;
+  color: #FFF;
+}
+.banner-caption p {
+  font-size: 0.8rem;
+  color: #f9f9f9;
+}
+@media screen and (max-width: 680px) {
+  .banner-caption {
+    display: block;
+    width: 100%;
+  }
+}
+
+.banner-hero {
+  color: #f9f9f9;
+  background-color: #5678ee;
+  opacity: 0.4;
+  background-image: url(../img/fix-website.jpeg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: border-box;
+}
+.banner-hero h1 {
+  z-index: 10;
+  font-size: 3rem;
+  color: #673ab7;
+  text-align: center;
+  border: 5px solid #673ab7;
+}
+@media screen and (max-width: 680px) {
+  .banner-hero {
+    background-size: cover;
+    height: 16rem;
+  }
+}
+
+.banner-cta {
+  margin-top: 2rem;
+  line-height: 2.5;
+  display: block;
+  width: 100%;
+}
+.banner-cta a:first-of-type {
+  border: 1px solid #f9f9f9;
+  margin-right: 1.5rem;
+}
+@media screen and (max-width: 800px) {
+  .banner-cta a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/*****************ABOUT US ************************/
+.wrapper {
+  width: 100%;
+  display: block;
+}
+
+.about-caption {
+  position: relative;
+  display: inline-block;
+  width: 80%;
+  background-color: #eee;
+  border-radius: 1rem;
+  padding: 2rem;
+  padding-right: 11rem;
+}
+.about-caption h2 {
+  margin-bottom: 1.4rem;
+}
+.about-caption article {
+  margin-bottom: 1.2rem;
+}
+@media screen and (max-width: 680px) {
+  .about-caption {
+    padding-right: 0;
+    padding: 2rem;
+  }
+}
+
+.about-image {
+  position: absolute;
+  top: 16%;
+  right: -8rem;
+  border-radius: 50%;
+  border: 10px groove #5678ee;
+  height: 60%;
+}
+@media screen and (max-width: 680px) {
+  .about-image {
+    top: -5%;
+    right: -2rem;
+    height: 37%;
+    opacity: 0.2;
+  }
+}
+
+/*********************FEATURE CARD*********************/
+@media screen and (max-width: 680px) {
+  #features {
+    background-image: url(../img/2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.feature-wrapper {
+  display: flex;
+}
+@media screen and (max-width: 680px) {
+  .feature-wrapper {
+    display: block;
+    color: #f9f9f9;
+    background-color: #5678ee;
+    opacity: 0.7;
+    padding: 1.5rem;
+  }
+}
+
+.feature-items {
+  width: 55%;
+}
+@media screen and (max-width: 680px) {
+  .feature-items {
+    width: 100%;
+  }
+}
+
+.feature-product-image {
+  width: 45%;
+  background-color: #a4dcc3;
+  background-image: url(../img/2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  opacity: 0.7;
+}
+@media screen and (max-width: 680px) {
+  .feature-product-image {
+    display: none;
+  }
+}
+
+.feature-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin: 1rem 0;
+}
+
+.feature-caption {
+  padding-left: 2rem;
 }
 
 .contact-form, .contact-data {
