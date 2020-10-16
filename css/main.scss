@@ -114,6 +114,198 @@
   }
 }
 
+/************ Page Header and Banner *********************/
+.page-header{
+  background-color: $primary-color;
+  padding: 3rem 0rem;
+  width: 100%;
+  display: block;
+
+}
+.banner{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  column-gap: .8rem;
+  @media screen and (max-width: $mobile-size){
+    &{
+      display: block;
+    }
+  }
+}
+.banner-caption{
+  width: 50%;
+  color: #FFF;
+  p{
+    font-size: .8rem;
+    color: $light-color;
+  }
+  @media screen and (max-width: $mobile-size){
+    &{
+      display: block;
+      width: 100%;
+    }
+  }
+}
+.banner-hero{
+  
+  color: $light-color;
+  background-color: $primary-color;
+  opacity: .4;
+  background-image: url(../img/fix-website.jpeg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: border-box;
+  h1{
+    z-index: 10;
+    font-size: 3rem;
+    color: #673ab7;
+    text-align: center;
+
+    border: 5px solid #673ab7;
+  }
+  @media screen and (max-width: $mobile-size){
+    &{
+      background-size: cover;
+      height: 16rem;
+    }
+  }
+}
+.banner-cta{
+  margin-top: 2rem;
+  line-height: 2.5;
+  display: block;
+  width: 100%;
+
+  a{
+    &:first-of-type{
+      border: 1px solid $light-color;
+      margin-right: 1.5rem;
+    }
+    @media screen and (max-width: $tablet-size){
+      &{
+        display: block;
+        width: 100%;
+        padding: .5rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  
+}
+
+/*****************ABOUT US ************************/
+.wrapper{
+  width: 100%;
+  display: block;
+}
+
+.about-caption{
+  position: relative;
+  display: inline-block;
+  width: 80%;
+  background-color: #eee;
+  border-radius: 1rem;
+  padding: 2rem;
+  padding-right: 11rem;
+  h2{
+    margin-bottom: 1.4rem;
+  }
+  article{
+    margin-bottom: 1.2rem;
+  }
+  @media screen and (max-width: $mobile-size){
+    padding-right: 0;
+    padding: 2rem;
+  }
+}
+
+.about-image{
+  position: absolute;
+  top: 16%;
+  right: -8rem;
+  border-radius: 50%;
+  border: 10px groove $primary-color;
+  height: 60%;
+  @media screen and (max-width: $mobile-size){
+    top: -5%;
+    right: -2rem;
+    height: 37%;
+    opacity: .2;
+  }
+}
+
+/*********************FEATURE CARD*********************/
+#features{
+  
+  
+  @media screen and (max-width: $mobile-size){
+    &{
+      // background-image: url(../img/2.png);
+      background-image: url(../img/2.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    
+    }
+ }
+   
+}
+.feature-wrapper{
+  display: flex;
+  @media screen and (max-width: $mobile-size){
+    &{
+      display: block;
+      color: $light-color;
+      background-color: $primary-color;
+      opacity: .7;
+      padding: 1.5rem;
+    }
+  }
+  
+}
+.feature-items{
+  width: 55%;
+  @media screen and (max-width: $mobile-size){
+    &{
+      width: 100%;
+    }
+  }
+
+}
+
+.feature-product-image{
+  width: 45%;
+  background-color: #a4dcc3;
+  // background-color: $light-color;
+  background-image: url(../img/2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  opacity: .7;
+  @media screen and (max-width: $mobile-size){
+    &{
+      display: none;
+    }
+  }
+}
+
+.feature-card{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin: 1rem 0;
+
+}
+.feature-caption{
+  padding-left: 2rem;
+}
 // Contact
 
 .contact{

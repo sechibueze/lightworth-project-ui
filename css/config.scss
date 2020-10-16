@@ -28,13 +28,13 @@ a{
   text-decoration: none;
 }
 
-.container{
+.container, .container-fluid{
   width: 80%;
   display: block;
   margin: auto;
-  &-fluid{
-    width: 90%;
-  }
+}
+.container-fluid{
+  width: 90%;
 }
 .section{
   padding: 4rem 0rem;
@@ -107,6 +107,10 @@ a{
   &-primary{
     background-color: $primary-color;
     color: $light-color;
+  }
+  &-reverse{
+    background-color: $light-color;
+    color: $primary-color;
   }
   &:hover{
     opacity: .8;
